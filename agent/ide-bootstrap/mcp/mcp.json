@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "work-agent": {
+      "command": "bash",
+      "args": ["scripts/run-work-agent-mcp.sh"]
+    }
+  }
+}

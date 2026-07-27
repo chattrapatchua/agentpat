@@ -1,0 +1,14 @@
+id: hello
+version: 1
+title: Hello discovery workflow
+description: MVP smoke test — loads research-ops skill for the Agent to follow
+inputs:
+  - name: theme
+    type: string
+    required: true
+steps:
+  - id: research
+    type: skill
+    ref: research-ops
+    with:
+      focus: "{{inputs.theme}}"

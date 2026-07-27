@@ -1,0 +1,40 @@
+id: learn-knowledge
+version: 1
+title: Learn Knowledge
+description: >
+  Interactive workflow — clarify topic, research with research-ops (including user chat),
+  summarize and confirm with the user, revise until yes, store via knowledge-ops to ./knowledge/,
+  then continuous-learning gate (ask to mark done, samectx sync, retrospective).
+interactive: true
+inputs:
+  - name: topic
+    type: string
+    required: false
+steps:
+  - id: clarify-topic
+    type: prompt
+    template: prompts/learn-knowledge/01-clarify-topic.md
+  - id: research
+    type: skill
+    ref: research-ops
+  - id: summarize-and-confirm
+    type: prompt
+    template: prompts/learn-knowledge/02-summarize-confirm.md
+  - id: revision-loop
+    type: prompt
+    template: prompts/learn-knowledge/03-revision-loop.md
+  - id: store
+    type: skill
+    ref: knowledge-ops
+  - id: store-instructions
+    type: prompt
+    template: prompts/learn-knowledge/04-store.md
+  - id: task-completion-gate
+    type: prompt
+    template: prompts/learn-knowledge/05-task-completion-gate.md
+  - id: samectx-sync
+    type: skill
+    ref: samectx
+  - id: retrospective
+    type: skill
+    ref: retrospective

@@ -1,0 +1,51 @@
+id: build-skill
+version: 1
+title: Build Skill
+description: >
+  Interactive workflow — gather context, role, knowledge, behavior, and rules via AskQuestion;
+  compose a skill prompt; create SKILL.md with skill-creator; draft under agent/define-skills and deploy to IDE skills.
+interactive: true
+inputs:
+  - name: skill_hint
+    type: string
+    required: false
+steps:
+  - id: gather-context
+    type: prompt
+    template: prompts/build-skill/01-gather-context.md
+  - id: gather-role
+    type: prompt
+    template: prompts/build-skill/02-gather-role.md
+  - id: gather-knowledge
+    type: prompt
+    template: prompts/build-skill/03-gather-knowledge.md
+  - id: gather-behavior
+    type: prompt
+    template: prompts/build-skill/04-gather-behavior.md
+  - id: gather-rules
+    type: prompt
+    template: prompts/build-skill/05-gather-rules.md
+  - id: compose-skill-brief
+    type: prompt
+    template: prompts/build-skill/06-compose-skill-brief.md
+  - id: name-skill
+    type: prompt
+    template: prompts/build-skill/07-name-skill.md
+  - id: prepare-skill-creator
+    type: prompt
+    template: prompts/build-skill/08-prepare-skill-creator.md
+  - id: create-skill
+    type: skill
+    ref: skill-creator
+  - id: deploy-skill
+    type: prompt
+    template: prompts/build-skill/10-deploy-skill.md
+  - id: task-completion-gate
+    type: prompt
+    template: prompts/build-skill/09-task-completion-gate.md
+  - id: samectx-sync
+    type: skill
+    ref: samectx
+  - id: retrospective
+    type: skill
+    ref: retrospective

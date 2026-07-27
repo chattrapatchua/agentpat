@@ -1,0 +1,22 @@
+{
+  "version": 1,
+  "hooks": {
+    "afterFileEdit": [
+      {
+        "command": ".cursor/hooks/task-gate-track-edits.sh"
+      }
+    ],
+    "postToolUse": [
+      {
+        "command": ".cursor/hooks/task-gate-after-knowledge-write.sh",
+        "matcher": "knowledge_write"
+      }
+    ],
+    "stop": [
+      {
+        "command": ".cursor/hooks/task-gate-on-stop.sh",
+        "loop_limit": 3
+      }
+    ]
+  }
+}
