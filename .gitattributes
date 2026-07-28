@@ -1,0 +1,6 @@
+# Shell scripts must stay LF so bash runs them on any platform.
+*.sh text eol=lf
+onboard-agent-* text eol=lf
+call-agent-* text eol=lf
+rename-agent-* text eol=lf
+scripts/* text eol=lf
