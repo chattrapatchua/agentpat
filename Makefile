@@ -1,4 +1,4 @@
-.PHONY: help install build test dev up down call-agent onboard-agent rename-agent call-agent-dan onboard-agent-dan
+.PHONY: help install build test dev up down call-agent onboard-agent rename-agent call-agent-agentpat onboard-agent-agentpat
 
 .DEFAULT_GOAL := help
 
@@ -8,13 +8,13 @@ help: ## Show available targets
 call-agent: ## Open Cursor (slug from agent/agent-name)
 	@bash scripts/call-agent.sh
 
-call-agent-dan: ## Same as call-agent when slug is dan
+call-agent-agentpat: ## Same as call-agent when slug is agentpat
 	@bash scripts/call-agent.sh
 
 onboard-agent: ## First-time clone (optional), install, build, open Cursor
 	@bash scripts/onboard-agent.sh
 
-onboard-agent-dan: ## Same as onboard-agent
+onboard-agent-agentpat: ## Same as onboard-agent
 	@bash scripts/onboard-agent.sh
 
 rename-agent: ## Rename agent: make rename-agent NEW=alex

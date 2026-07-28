@@ -8,9 +8,9 @@ Full design: [`agent/architecture.md`](../agent/architecture.md) (MCP server sec
 
 | Command | Purpose |
 | --- | --- |
-| `./onboard-agent-dan` | First time — clone (optional), install, build, open Cursor |
-| `./call-agent-dan` | Routine — install/build if needed, open Cursor |
-| `./rename-agent-dan <slug>` | Rename agent; regenerates entrypoints |
+| `./onboard-agent-agentpat` | First time — clone (optional), install, build, open Cursor |
+| `./call-agent-agentpat` | Routine — install/build if needed, open Cursor |
+| `./rename-agent-agentpat <slug>` | Rename agent; regenerates entrypoints |
 
 Cursor starts MCP automatically via **`.cursor/mcp.json`** → `bash scripts/run-work-agent-mcp.sh`. Clone URL: `agent/default-repo.url`, `WORK_AGENT_REPO_URL`, or `--repo`.
 

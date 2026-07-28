@@ -31,31 +31,31 @@ Goal: use **Agent mode** in this repo with **work-agent** MCP tools over `./know
 **First machine / fresh clone:**
 
 ```bash
-./onboard-agent-dan
-# clones https://github.com/ethanhuangcst/agent-dan.git when run outside the repo
+./onboard-agent-agentpat
+# clones https://github.com/chattrapatchua/agentpat.git when run outside the repo
 # asks which IDE you use (Claude / Codex / Cursor / Other) and deploys rules, skills, workflows to .{ide}/
 ```
 
-Non-interactive: `./onboard-agent-dan --ide cursor --non-interactive`
+Non-interactive: `./onboard-agent-agentpat --ide cursor --non-interactive`
 
 **Already have the repo:**
 
 ```bash
-./call-agent-dan
-# or: make call-agent-dan
-# or: npm run call-agent-dan
+./call-agent-agentpat
+# or: make call-agent-agentpat
+# or: npm run call-agent-agentpat
 ```
 
 **Rename the agent** (e.g. to `alex`):
 
 ```bash
-./rename-agent-dan alex
+./rename-agent-agentpat alex
 # then use: ./call-agent-alex
 ```
 
 This runs **install** and **build** only when needed, then opens **Cursor**. MCP **work-agent** starts from `.cursor/mcp.json` (`scripts/run-work-agent-mcp.sh`).
 
-Use `call-agent-dan --fresh` to force reinstall and rebuild.
+Use `call-agent-agentpat --fresh` to force reinstall and rebuild.
 
 In Cursor:
 

@@ -1,6 +1,6 @@
 # IDE onboarding
 
-On **`./onboard-agent-dan`**:
+On **`./onboard-agent-agentpat`**:
 
 1. **Choose IDE** — Claude, Codex, Cursor, or Other (custom folder name).
 2. **Write** [`ide-target`](ide-target) — `IDE`, `IDE_DIR` (e.g. `.cursor`, `.claude`).
@@ -24,7 +24,7 @@ On **`./onboard-agent-dan`**:
 | Cursor | `.cursor/mcp.json` → `scripts/run-work-agent-mcp.sh` |
 | Other | `WORK_AGENT_IDE_DIR=$IDE_DIR bash scripts/run-work-agent-mcp.sh` (workflows/skills paths follow `ide-target`) |
 
-**Routine:** `./call-agent-dan` re-runs deploy if `$IDE_DIR` is out of sync with `.cursor`.
+**Routine:** `./call-agent-agentpat` re-runs deploy if `$IDE_DIR` is out of sync with `.cursor`.
 
 **Test all targets:** `bash scripts/test-ide-deploy.sh`
 
